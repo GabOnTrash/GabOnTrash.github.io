@@ -12,11 +12,26 @@ const descr = document.getElementById("descr");
 const cards = document.getElementById("cards");
 const allCards = document.querySelectorAll('.card, .cardP');
 const prjSection = document.querySelector('.Prj');
+const imageContainer = document.getElementById("imageContainer");
+const gallery = document.getElementById("gallery");
+const text = document.querySelector('.text');
 
 let index = 0;
 let primaVolta = true;
 let hideTimer;
 let opened = false;
+
+const photoGallery = new Map([
+  ["Me under the Liberty statue!", "libertyStatue.jpg"],
+  ["A photo of the Manhattan bridge as seen from Brooklyn!", "brooklyn.jpg"],
+  ["Grand Central Station!", "grandCentral.jpg"],
+  ["A group photo with the other guys i went to New York with!", "groupPhoto.jpg"],
+  ["A photo of the iconic Wall Street sign!", "wallSt.jpg"],
+  ["Photo of the famous 'Red Stair' in Times Square.", "timesSquare1.jpg"],
+  ["Another photo of Times Square!", "timesSquare2.jpg"]
+]);
+const keys = Array.from(photoGallery.keys()); 
+let GalleryIndex = 0;
 
 const observer = new IntersectionObserver((entries) => 
     {
@@ -120,6 +135,13 @@ function openLen()
     }
 }
 
+imageContainer.addEventListener("click", () =>
+{
+    GalleryIndex = (GalleryIndex + 1) % photoGallery.size;
+
+    text.textContent = keys[GalleryIndex];
+    gallery.src = photoGallery.get(keys[GalleryIndex]);
+})
 // Se il cursore va vicino al bordo superiore, mostra la navbar
 document.addEventListener("mousemove", (e) => 
 {

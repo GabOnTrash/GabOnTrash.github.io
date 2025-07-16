@@ -1,8 +1,8 @@
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url('grogu.png') 0 0, auto;
     font-family: 'JetBrains Mono', monospace !important;
     font-weight: 600 !important; /* SemiBold */
 }
@@ -179,6 +179,14 @@ body
     color: rgba(255, 255, 255, 0.895);
     font-size: 4.5rem;
 }
+#name span
+{
+    transition: 0.5s;
+}
+#name span:hover
+{
+    scale: 1.1;
+}
 
 /* Gruppo testo + immagine */
 #group 
@@ -240,6 +248,7 @@ body
     object-fit: cover;
     aspect-ratio: 16/9;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
 #imageContainer span 
