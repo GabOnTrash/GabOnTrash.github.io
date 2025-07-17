@@ -118,9 +118,10 @@ function handleFirstInteraction()
 
 function cycleBackgroundImages()
 {
-    index = (index + 1) % images.length;
-    document.querySelector('.startImg').src = images[index];
+    bgImageIndex = (bgImageIndex + 1) % images.length;
+    document.querySelector('.startImg').src = images[bgImageIndex];
 }
+
 // === EVENT LISTENERS ===
 allCards.forEach(card => 
 {
