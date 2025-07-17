@@ -1,5 +1,3 @@
-// == MAIN.JS REFACTORED ==
-
 // === GALLERIA IMMAGINI SFONDO ===
 const images = ['assets/images/jpn.jpg', 'assets/images/vikings.jpg', 'assets/images/house.jpg', 'assets/images/valley.jpg'];
 let bgImageIndex = 0;
@@ -147,7 +145,7 @@ descr.addEventListener("click", () =>
 
 menu.addEventListener("click", () => 
 {
-    window.open("CV_Studente.pdf", "_blank");
+    window.open("files/documents/CV_Studente.pdf", "_blank");
 });
 
 navbar.addEventListener("mouseenter", () => 
