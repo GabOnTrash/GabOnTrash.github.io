@@ -1,0 +1,47 @@
+
+
+#start
+{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+}
+#start .startImg 
+{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+#overlay 
+{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;     
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+#start #link
+{
+    color: white;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+#link a
+{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+#link a:hover
+{
+    color: gray;
+}
+

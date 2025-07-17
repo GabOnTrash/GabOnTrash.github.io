@@ -198,4 +198,3 @@ setInterval(() =>
 
 // data in anno corrente
 document.getElementById("copyright").innerHTML = `&copy; ${new Date().getFullYear()} Gabriele Armenise. All rights reserved.`;
-
