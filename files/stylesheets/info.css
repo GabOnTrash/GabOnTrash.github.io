@@ -111,6 +111,10 @@
 .galleryBtn
 {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
     min-width: 2.7rem;
     min-height: 4.4rem;
     border: none;
@@ -124,6 +128,10 @@
     
     opacity: 0;
     transition: opacity 0.5s ease;
+}
+.arrow
+{
+    scale: 0.7;
 }
 #front
 {
