@@ -107,9 +107,16 @@
     padding: 0;
     background-color: rgba(130, 87, 87, 0.303);
     filter: drop-shadow(0 0 0.75rem rgba(204, 39, 39, 0.5));
+    transition: scale 1s ease;
 }
 
-/* cosa succede alle carte quando facciamo display sull'insieme delle carte */
+.card:hover,
+.cardP:hover 
+{
+    scale: 1.1;
+    text-decoration: underline;
+}
+
 #cards.displayed .card,
 #cards.displayed .cardP 
 {
