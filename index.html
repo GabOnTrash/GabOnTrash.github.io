@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="start.css">
-    <link rel="stylesheet" href="info.css">
-    <link rel="stylesheet" href="projectCards.css">
-    <link rel="stylesheet" href="projectPages.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="mediaQueries.css">
+    <link rel="stylesheet" href="files/stylesheets/style.css">
+    <link rel="stylesheet" href="files/stylesheets/navbar.css">
+    <link rel="stylesheet" href="files/stylesheets/start.css">
+    <link rel="stylesheet" href="files/stylesheets/info.css">
+    <link rel="stylesheet" href="files/stylesheets/projectCards.css">
+    <link rel="stylesheet" href="files/stylesheets/projectPages.css">
+    <link rel="stylesheet" href="files/stylesheets/footer.css">
+    <link rel="stylesheet" href="files/stylesheets/mediaQueries.css">
 
     <title>PortFolio</title>
 </head>
@@ -21,7 +21,7 @@
     <nav id="navbar" class="hidden">
         
         <div id="logo">
-            <img src="cv.svg" id="icon">Gabriele Armenise
+            <img src="assets/svg/cv.svg" id="icon">Gabriele Armenise
         </div>
         <!--<div id="indice">
             <label>Html/JS Projects</label>
@@ -69,7 +69,7 @@
                     <div id="galleryDiv">
                         <button class="galleryBtn" id="front" onclick="updateGalleryImage(1)">></button>
                         <button class="galleryBtn" id="back" onclick="updateGalleryImage(-1)"><</button>
-                        <img src="libertyStatue.jpg" alt="NYPhotos" id="gallery" class="gabrieleImg">
+                        <img src="assets/images/libertyStatue.jpg" alt="NYPhotos" id="gallery" class="gabrieleImg">
                     </div>
                 </div>
             </div>
@@ -88,14 +88,14 @@
 
         <div id="descr">
             <div id="cards">
-                <div class="card" style="filter: drop-shadow(0 0 0.9rem #5C6BC0);" data-language='c'><img src="c.svg"><span>C</span></div>
-                <div class="card" style="filter: drop-shadow(0 0 0.9rem #0086D4);" data-language='c'><img src="c++.svg"><span>C++</span></div>
-                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FFC107);" data-language='python'><img src="py.svg"><span>Python</span></div>
-                <div class="card" style="filter: drop-shadow(0 0 0.9rem #4E7896);" data-language='java'><img src="java.svg"><span>Java</span></div>
-                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FF6D00);" data-language='html'><img src="html.svg"><span>Html</span></div>
-                <div class="card" style="filter: drop-shadow(0 0 0.9rem #0277BD);" data-language='css'><img src="css.svg"><span>CSS</span></div>
-                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FFD600);" data-language='js'><img src="javascript.svg"><span>JS</span></div>
-                <div class="cardP" style="filter: drop-shadow(0 0 0.9rem#777BB3);" data-language='php'><img src="php.svg"><div>PHP</div></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #5C6BC0);" data-language='c'><img src="assets/svg/c.svg"><span>C</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #0086D4);" data-language='c'><img src="assets/svg/c++.svg"><span>C++</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FFC107);" data-language='python'><img src="assets/svg/py.svg"><span>Python</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #4E7896);" data-language='java'><img src="assets/svg/java.svg"><span>Java</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FF6D00);" data-language='html'><img src="assets/svg/html.svg"><span>Html</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #0277BD);" data-language='css'><img src="assets/svg/css.svg"><span>CSS</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FFD600);" data-language='js'><img src="assets/svg/javascript.svg"><span>JS</span></div>
+                <div class="cardP" style="filter: drop-shadow(0 0 0.9rem#777BB3);" data-language='php'><img src="assets/svg/php.svg"><div>PHP</div></div>
             </div>
         </div>
     </div>
@@ -188,19 +188,19 @@
         <div id="contact">
             <span id="github">
                 <a href="https://github.com/gabontrash" target="_blank">
-                    <img src="github.svg" alt="GitHub">GitHub
+                    <img src="assets/svg/github.svg" alt="GitHub">GitHub
                 </a>
             </span>
     
             <span id="instagram">
                 <a href="https://www.instagram.com/_gabrielearmenise" target="_blank">
-                    <img src="instagram.svg" alt="Instagram">Instagram
+                    <img src="assets/svg/instagram.svg" alt="Instagram">Instagram
                 </a>
             </span>
     
             <span id="gmail">
                 <a href="mailto:gabrielearmenise08@gmail.com" target="_blank">
-                    <img src="gmail.svg" alt="Gmail">Gmail
+                    <img src="assets/svg/gmail.svg" alt="Gmail">Gmail
                 </a>
             </span>
         </div>
@@ -210,6 +210,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="files/scripts/script.js"></script>
 </body>
 </html>
