@@ -33,3 +33,28 @@ html, body
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+::selection 
+{
+    background-color: #B5FF00;
+    color: #000000;
+}
+
+img 
+{
+    user-select: none;
+}
+
+/*
+::selection 
+{
+    background-color: #00AEEF; /* Azzurro vivido 
+    color: #ffffff;
+}
+
+::selection 
+{
+    background-color: #e0e0e0; /* Grigio chiarissimo 
+    color: #121212;           /* Quasi nero 
+}
+*/

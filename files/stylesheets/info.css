@@ -93,6 +93,7 @@
     max-width: 60rem;
     min-width: 43rem;
     padding: 1rem;
+    width: fit-content;
 }
 #imageContainer span 
 {
@@ -105,7 +106,17 @@
 #galleryDiv
 {
     position: relative;
+    border-radius: 8px;
+    background-color: var(--color-text);
+
+    transition: all 0.3s ease;
 }
+#galleryDiv:hover
+{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px var(--black-charcoal);
+}
+
 #galleryDiv:hover .galleryBtn
 {
     opacity: 1;
@@ -149,6 +160,7 @@
 }
 #imageContainer img 
 {
+    display: block;
     width: 100%;
     max-height: 100%;
     object-fit: cover;
