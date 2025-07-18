@@ -188,13 +188,13 @@
     {
         flex-direction: column;
         flex: 1 1 100%;
-        height: auto;
+        min-height: 100vh;
         padding-top: 2rem;
     }
     #description
     {
         max-height: fit-content;
-        z-index: 3;
+        z-index: 1;
         min-width: none;
     }
     #description p
