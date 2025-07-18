@@ -156,6 +156,9 @@
 }
 #down 
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
     width: 3rem;
@@ -167,9 +170,6 @@
 
 #arrowDown 
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.895);
     font-size: 2rem;
