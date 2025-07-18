@@ -36,7 +36,7 @@
     margin: 0;
     font-size: 20rem; 
     transition: transform 1.5s ease, opacity 1s ease-out;
-    color: white;
+    color: var(--color-text);
     word-break: break-word;
 }
 #projectSection #projectsLabel #programming.aperto
@@ -101,7 +101,7 @@
 
     opacity: 0;
     text-align: center;
-    color: white;
+    color: var(--color-text);
     font-size: 1.8rem;
     font-weight: bold;
     padding: 0;

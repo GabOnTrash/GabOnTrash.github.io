@@ -1,3 +1,9 @@
+:root
+{
+    --black-charcoal: #333333;      
+    --color-text: #EEEEEE;
+}
+
 * 
 {
     margin: 0;
@@ -19,7 +25,7 @@ body
     scrollbar-width: none;           /* Firefox */
     -ms-overflow-style: none;        /* Internet Explorer e Edge legacy */
 
-    background-color: black;
+    background-color: var(--black-charcoal);
 }
 
 html, body 
