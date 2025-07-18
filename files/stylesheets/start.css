@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     flex: 1;
+    padding: 0;
 }
 
 #overlay 
@@ -51,11 +52,12 @@
     align-items: center;
     justify-content: center;
     user-select: text;
-    height: fit-content;
     flex: 1;
 
-    max-width: 50%;
+    width: fit-content;
+    height: 100%;
     font-size: 2rem;
+    padding: 0;
     background-color: black;
     color: var(--purple-start);
 
@@ -80,7 +82,7 @@
     align-items: center;
     flex: 1;
 
-    max-width: 50%;
+    width: calc(fit-content / 1.25);
     height: 100vh;
 
     z-index: 1;
