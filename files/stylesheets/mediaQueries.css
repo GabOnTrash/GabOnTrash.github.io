@@ -184,6 +184,11 @@
         transform: scale(1.04);
     }
 
+    #overlay #link
+    {
+        font-size: 1rem;
+    }
+
     #start 
     {
         flex-direction: column;

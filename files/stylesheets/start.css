@@ -16,20 +16,17 @@
 #overlay 
 {
     position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
     padding: 2rem;
     z-index: 2;
 }
-#start #link
+#overlay #link
 {
     color: var(--purple-start);
-    font-size: 25px;
+    font-size: 1.56rem;
     background-color: var(--black-charcoal);
     padding: 0.5rem 1rem;
     border-radius: 8px;
