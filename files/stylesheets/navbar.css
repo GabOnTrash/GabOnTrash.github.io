@@ -59,17 +59,3 @@
     text-decoration: underline;
     text-shadow: 0 0 0.5rem var(--color-text), 0 0 1rem var(--color-text), 0 0 1.5rem var(--color-text);
 }
-/*#navbar #indice
-{
-    left: -100%;
-    top: 4rem;
-    width: auto;
-    height: calc(100vh - 4rem);
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    transition: 0.15s ease-in-out;
-}*/

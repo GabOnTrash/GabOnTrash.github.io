@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="files/stylesheets/mediaQueries.css">
 
     <title>PortFolio</title>
+
 </head>
 <body>
 
     <nav id="navbar" class="hidden">
         
         <div id="logo">
-            <img src="assets/svg/cv.svg" id="icon">Gabriele Armenise
+            <img src="assets/images/globe.png" id="icon"><span>Gabriele Armenise</span>
         </div>
         <!--<div id="indice">
             <label>Html/JS Projects</label>
@@ -35,15 +36,23 @@
             <a href="#info">Info</a>
             <a href="#projectSection">Languages</a>
             <a href="#contact">Contact</a>
+            <a href="files/documents/CV_Studente.pdf" target="_blank">My CV</a>
         </div>
     </nav>
 
     <div id="start">
-        <img src="assets/images/jpn.jpg" alt="Profile Picture" class="startImg">
+        
+        <div id="description">
+            <p>Web Personal PortFolio made by myself, using Three.js for the animation and normal JS for the entire website, with no libraries whatsoever.</p>
+        </div>
 
         <div id="overlay">
-            <span id="link"><a href="#info" onclick="Pressed()">See My PortFolio ↓</a></span>
+            <span id="link">
+                <a href="#info" onclick="Pressed()">See My PortFolio ↓</a>
+            </span>
         </div>
+
+        <div id="canvas-container"></div>
     </div>
 
     <div id="info">
@@ -210,6 +219,19 @@
         </div>
     </footer>
 
+
+    <script type="importmap">
+    {
+        "imports": 
+        {
+            "three": "https://unpkg.com/three@0.154.0/build/three.module.js",
+            "three/addons/lines/Line2.js": "https://unpkg.com/three@0.154.0/examples/jsm/lines/Line2.js",
+            "three/addons/lines/LineGeometry.js": "https://unpkg.com/three@0.154.0/examples/jsm/lines/LineGeometry.js",
+            "three/addons/lines/LineMaterial.js": "https://unpkg.com/three@0.154.0/examples/jsm/lines/LineMaterial.js"
+        }
+    }
+    </script>
     <script src="files/scripts/script.js"></script>
+    <script type="module" src="files/scripts/figure.js"></script>
 </body>
 </html>

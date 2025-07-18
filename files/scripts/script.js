@@ -1,6 +1,6 @@
 // === GALLERIA IMMAGINI SFONDO ===
-const images = ['assets/images/jpn.jpg', 'assets/images/vikings.jpg', 'assets/images/house.jpg', 'assets/images/valley.jpg'];
-let bgImageIndex = 0;
+/*const images = ['assets/images/jpn.jpg', 'assets/images/vikings.jpg', 'assets/images/house.jpg', 'assets/images/valley.jpg'];
+let bgImageIndex = 0;*/
 
 // === GALLERIA FOTO NEW YORK ===
 const photoGallery = new Map([
@@ -18,7 +18,6 @@ let galleryIndex = 0;
 // === ELEMENTI DOM ===
 const navbar = document.getElementById("navbar");
 const info = document.getElementById("info");
-const menu = document.getElementById("icon");
 const indice = document.getElementById("indice");
 const projectSection = document.getElementById("projectSection");
 const languages = document.getElementById("languages");
@@ -101,7 +100,6 @@ function showNavbar()
 function hideNavbar() 
 {
     navbar.classList.add("hidden");
-    indice.style.left = "-100%";
 }
 
 function handleFirstInteraction() 
@@ -114,11 +112,11 @@ function handleFirstInteraction()
     }
 }
 
-function cycleBackgroundImages()
+/*function cycleBackgroundImages()
 {
     bgImageIndex = (bgImageIndex + 1) % images.length;
     document.querySelector('.startImg').src = images[bgImageIndex];
-}
+}*/
 
 // === EVENT LISTENERS ===
 allCards.forEach(card => 
@@ -141,11 +139,6 @@ descr.addEventListener("click", () =>
 {
     isProjectOpen = false;
     toggleProjects();
-});
-
-menu.addEventListener("click", () => 
-{
-    window.open("files/documents/CV_Studente.pdf", "_blank");
 });
 
 navbar.addEventListener("mouseenter", () => 
@@ -181,7 +174,7 @@ const observer = new IntersectionObserver(entries =>
 observer.observe(prjSection);
 
 // === CICLO IMMAGINI SFONDO ===
-setInterval(cycleBackgroundImages, 10000);
+//setInterval(cycleBackgroundImages, 10000);
 
 // === COPYRIGHT ===
 copyright.innerHTML = `&copy; ${new Date().getFullYear()} Gabriele Armenise. All rights reserved.`;
