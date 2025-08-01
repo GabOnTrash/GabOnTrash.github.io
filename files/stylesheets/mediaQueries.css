@@ -55,11 +55,6 @@
     {
         font-size: 1.5rem;
     }
-    #canvas-container
-    {
-        justify-content: center;
-        transform: scale(0.6);
-    }
 }
 @media screen and (max-width: 1500px)
 {
@@ -157,15 +152,6 @@
         font-weight: normal;
         border-radius: 10px;
     }
-    #logo #icon 
-    {
-        display: none;
-    }
-    #logo span
-    {
-        margin-left: 1rem;
-    }
-
 	.prj 
     {
         width: 95vw;
@@ -222,11 +208,11 @@
     }
     #logo span
     {
-        display: none;
+        margin-left: 1rem;
     }
     #logo #icon
     {
-        display: block;
+        display: none;
     }
 
     #description p
@@ -234,11 +220,18 @@
         font-size: 1.5rem;
     }
 }
-@media screen and (max-width: 430px)
+@media screen and (max-width: 450px)
 {
     #canvas-container 
     {
-        width: 200vw;
+        transform: scale(0.65);
+    }
+}
+@media screen and (max-width: 300px)
+{
+    #canvas-container 
+    {
+        width: 150%;
         transform: scale(0.5);
-    }    
+    }
 }
