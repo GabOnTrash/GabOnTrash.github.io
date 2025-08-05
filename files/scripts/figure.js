@@ -71,3 +71,4 @@ window.addEventListener('resize', () =>
     lineMat.resolution.set(w, h);
 });
 
+window.addEventListener('resize', resizeRenderer);

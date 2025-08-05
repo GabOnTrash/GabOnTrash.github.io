@@ -47,17 +47,6 @@
         padding: 1rem;
     }
 
-    #description
-    {
-        min-width: 25vw;
-    }
-    #description p
-    {
-        font-size: 1.5rem;
-    }
-}
-@media screen and (max-width: 1500px)
-{
     #start 
     {
         flex-direction: column;
@@ -75,8 +64,17 @@
     }
     #canvas-container 
     {
-        width: 100%;
+        width: 100vw;
         height: 65vh;
+    }
+
+    #description
+    {
+        min-width: 25vw;
+    }
+    #description p
+    {
+        font-size: 1.5rem;
     }
 }
 @media screen and (max-width: 1300px) 
@@ -131,7 +129,6 @@
         margin-top: 1.5rem;
     }
 }
-
 @media screen and (max-width: 800px) 
 {
     #navbar #menu
@@ -178,10 +175,8 @@
 
     #start 
     {
-        flex-direction: column;
-        flex: 1 1 100%;
-        min-height: 100vh;
-        height: fit-content;
+        max-height: 100vh;
+        height: 100vh;
         padding-top: 2rem;
     }
     #description
@@ -194,9 +189,11 @@
     {
         max-width: 75%;
     }
-    #canvas-container 
+
+    #canvas-container
     {
-        width: 150%;
+        width: 150vw;
+        transform: scale(0.7);
     }
 }
 @media screen and (max-width: 500px)
@@ -220,18 +217,11 @@
         font-size: 1.5rem;
     }
 }
-@media screen and (max-width: 450px)
+@media screen and (max-width: 500px)
 {
-    #canvas-container 
+    #canvas-container
     {
-        transform: scale(0.65);
-    }
-}
-@media screen and (max-width: 300px)
-{
-    #canvas-container 
-    {
-        width: 150%;
-        transform: scale(0.5);
+        width: 150vw;
+        transform: scale(0.4);
     }
 }
