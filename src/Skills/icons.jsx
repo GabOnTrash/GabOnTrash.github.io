@@ -6,6 +6,7 @@ import html from        '../assets/svg/html.svg';
 import css from         '../assets/svg/css.svg';
 import javascript from  '../assets/svg/javascript.svg';
 import php from         '../assets/svg/php.svg';
+import react from       '../assets/svg/react.svg'
 
 const icons = 
 {
@@ -16,6 +17,7 @@ const icons =
     html,
     css,
     javascript,
+    react,
     php
 };
 

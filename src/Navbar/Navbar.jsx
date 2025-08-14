@@ -21,7 +21,7 @@ function Navbar()
 
             <ul className={menuOpen ? "nav-links active" : "nav-links"}>
                 <li><a href="#about">About me</a></li>
-                <li><a href="#skills">Dev Skills</a></li>
+                <li><a href="#skills">Dev skills</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href={cv} target="_blank" rel="noopener noreferrer">Curriculum</a></li>
             </ul>

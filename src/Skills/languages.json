@@ -47,7 +47,7 @@
     },
     {
         "id": "html",
-        "name": "HTML",
+        "name": "Html",
         "color": "#FF6D00",
         "icon": "html",
         "projects": 
@@ -72,10 +72,23 @@
         ]
     },
     {
-        "id": "js",
-        "name": "JavaScript",
+        "id": "javasript",
+        "name": "Javascript",
         "color": "#FFD600",
         "icon": "javascript",
+        "projects": 
+        [
+            { "name": "Calculator", "link": "https://gabrielearmenise.altervista.org/Vecchi_prog/CalcAll1.html" },
+            { "name": "Login Page", "link": "https://gabrielearmenise.altervista.org/Login/login.html" },
+            { "name": "Lecce's Map", "link": "https://gabrielearmenise.altervista.org/lecce/Visitare%20lecce.html" },
+            { "name": "Dice Generator", "link": "https://gabrielearmenise.altervista.org/DADI/Dadi.php" }
+        ]
+    },
+    {
+        "id": "react",
+        "name": "React",
+        "color": "#61DAFBAA",
+        "icon": "react",
         "projects": 
         [
             { "name": "Calculator", "link": "https://gabrielearmenise.altervista.org/Vecchi_prog/CalcAll1.html" },
