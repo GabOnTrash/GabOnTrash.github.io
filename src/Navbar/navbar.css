@@ -1,0 +1,100 @@
+#navbar 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--soft-dark);
+    color: var(--soft-white);
+    height: 5rem;
+    padding: 0 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#navbar #logo 
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+#navbar #logo img 
+{
+    height: 2.5rem;
+    width: auto;
+}
+
+.nav-links 
+{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.nav-links li 
+{
+    list-style: none;
+}
+.nav-links a 
+{
+    display: inline-flex;             
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    text-decoration: none;
+    color: var(--soft-white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: transform 240ms ease, background-color 240ms ease, box-shadow 240ms ease;
+    will-change: transform;
+    transform: translateZ(0);    
+}
+.nav-links a:hover,
+.nav-links a:focus 
+{
+    transform: translateY(-4px);       /* prova -4px per essere visibile */
+    background-color: rgba(255,255,255,0.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    text-decoration: none;
+}
+.hamburger 
+{
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (max-width: 800px) 
+{
+    .hamburger 
+    {
+        display: block;
+    }
+    .nav-links 
+    {
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--soft-dark);
+        width: 100%;
+        top: 5rem;
+        right: 0;
+        padding: 1rem;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.5s;
+        border-top: 1px solid var(--soft-white);
+    } 
+
+    .nav-links.active 
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,108 @@
+.project-section 
+{
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.projects-label 
+{
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-label h4 
+{
+    width: fit-content;
+    color: var(--purple-start);
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: transform 240ms ease, background-color 240ms ease, box-shadow 240ms ease;
+}
+.projects-label h4:hover,
+.projects-label h4:focus 
+{
+    transform: translateY(-4px);     
+    background-color: rgba(0, 0, 0, 0.100);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.cards 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card 
+{
+    background: var(--soft-dark);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.card img 
+{
+    width: 3rem;
+    height: 3rem;
+}
+.card span 
+{
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.card:hover 
+{
+    transform: translateY(-5px) scale(1.05);
+}
+.projects-container
+{
+    margin-top: 2.5rem;
+}
+.projects-container h4 
+{
+    color: var(--purple-start);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.projects-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+.project-card 
+{
+    background: var(--soft-dark);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    transition: background 0.25s ease;
+}
+.project-card a 
+{
+    color: #fff;
+    text-decoration: none;
+}
+.project-card:hover 
+{
+    background: #2a2a2a;
+}
+.no-projects 
+{
+    color: #777;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,91 @@
+#imageContainer 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex: 1 0 1;
+    width: 50%;
+    padding: 1rem;
+}
+#imageContainer span 
+{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--soft-dark);
+}
+#galleryDiv
+{
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--soft-white);
+
+    transition: all 0.3s ease;
+}
+#galleryDiv:hover
+{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px var(--soft-dark);
+}
+
+#galleryDiv:hover .galleryBtn
+{
+    opacity: 1;
+}
+.galleryBtn
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    min-width: 2.7rem;
+    min-height: 4.4rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    top: calc(50% - 2.2rem);
+
+    backdrop-filter: blur(10px);
+    background: var(--soft-white);
+    box-shadow: 0 8px 32px var(--soft-dark);
+    
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.arrow
+{
+    scale: 0.7;
+}
+#front
+{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    right: 0;
+}
+#back
+{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    left: 0;
+}
+#imageContainer img 
+{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1600px) 
+{
+    #imageContainer
+    {
+        width: 100%;
+    }
+}

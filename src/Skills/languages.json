@@ -1,0 +1,100 @@
+[
+    {
+        "id": "c",
+        "name": "C",
+        "color": "#5C6BC0",
+        "icon": "c",
+        "projects": 
+        [
+            { "name": "Tetris", "link": "https://github.com/GabOnTrash/Tetris_1" },
+            { "name": "Space Shooter", "link": "https://github.com/GabOnTrash/Space-Invader" },
+            { "name": "Pong", "link": "https://github.com/GabOnTrash/Pong" },
+            { "name": "My Crosshair", "link": "https://github.com/GabOnTrash/Crosshair" }
+        ]
+    },
+    {
+        "id": "cpp",
+        "name": "C++",
+        "color": "#0086D4",
+        "icon": "cpp",
+        "projects": 
+        [
+            { "name": "Tetris", "link": "https://github.com/GabOnTrash/Tetris_1" },
+            { "name": "Space Shooter", "link": "https://github.com/GabOnTrash/Space-Invader" },
+            { "name": "Pong", "link": "https://github.com/GabOnTrash/Pong" },
+            { "name": "My Crosshair", "link": "https://github.com/GabOnTrash/Crosshair" }
+        ]
+    },
+    {
+        "id": "python",
+        "name": "Python",
+        "color": "#FFC107",
+        "icon": "py",
+        "projects": 
+        [
+            { "name": "Sky Climb", "link": "https://github.com/GabOnTrash/Sky-Climb" },
+            { "name": "Youtube Downloader", "link": "" },
+            { "name": "QR Code Generator", "link": "" },
+            { "name": "Vampire Survivor", "link": "" }
+        ]
+    },
+    {
+        "id": "java",
+        "name": "Java",
+        "color": "#4E7896",
+        "icon": "java",
+        "projects": []
+    },
+    {
+        "id": "html",
+        "name": "HTML",
+        "color": "#FF6D00",
+        "icon": "html",
+        "projects": 
+        [
+            { "name": "Calculator", "link": "https://gabrielearmenise.altervista.org/Vecchi_prog/CalcAll1.html" },
+            { "name": "Login Page", "link": "https://gabrielearmenise.altervista.org/Login/login.html" },
+            { "name": "Lecce's Map", "link": "https://gabrielearmenise.altervista.org/lecce/Visitare%20lecce.html" },
+            { "name": "Dice Generator", "link": "https://gabrielearmenise.altervista.org/DADI/Dadi.php" }
+        ]
+    },
+    {
+        "id": "css",
+        "name": "CSS",
+        "color": "#0277BD",
+        "icon": "css",
+        "projects": 
+        [
+            { "name": "Calculator", "link": "https://gabrielearmenise.altervista.org/Vecchi_prog/CalcAll1.html" },
+            { "name": "Login Page", "link": "https://gabrielearmenise.altervista.org/Login/login.html" },
+            { "name": "Lecce's Map", "link": "https://gabrielearmenise.altervista.org/lecce/Visitare%20lecce.html" },
+            { "name": "Dice Generator", "link": "https://gabrielearmenise.altervista.org/DADI/Dadi.php" }
+        ]
+    },
+    {
+        "id": "js",
+        "name": "JavaScript",
+        "color": "#FFD600",
+        "icon": "javascript",
+        "projects": 
+        [
+            { "name": "Calculator", "link": "https://gabrielearmenise.altervista.org/Vecchi_prog/CalcAll1.html" },
+            { "name": "Login Page", "link": "https://gabrielearmenise.altervista.org/Login/login.html" },
+            { "name": "Lecce's Map", "link": "https://gabrielearmenise.altervista.org/lecce/Visitare%20lecce.html" },
+            { "name": "Dice Generator", "link": "https://gabrielearmenise.altervista.org/DADI/Dadi.php" }
+        ]
+    },
+    {
+        "id": "php",
+        "name": "PHP",
+        "color": "#777BB3",
+        "icon": "php",
+        "projects": 
+        [
+            { "name": "Calculator", "link": "https://gabrielearmenise.altervista.org/Vecchi_prog/CalcAll1.html" },
+            { "name": "Login Page", "link": "https://gabrielearmenise.altervista.org/Login/login.html" },
+            { "name": "Lecce's Map", "link": "https://gabrielearmenise.altervista.org/lecce/Visitare%20lecce.html" },
+            { "name": "Dice Generator", "link": "https://gabrielearmenise.altervista.org/DADI/Dadi.php" }
+        ]
+    }
+]

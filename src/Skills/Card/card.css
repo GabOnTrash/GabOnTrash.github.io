@@ -1,0 +1,28 @@
+.card 
+{
+    background: var(--soft-dark);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+.card img 
+{
+  width: 3rem;
+  height: 3rem;
+}
+.card span 
+{
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.card:hover 
+{
+  transform: translateY(-5px) scale(1.05);
+}
