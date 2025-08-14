@@ -1,0 +1,43 @@
+#footer 
+{
+    background-color: black;
+    color: var(--color-text);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+#contact 
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+#contact span a 
+{
+    color: var(--color-text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+#contact span a:hover 
+{
+    text-decoration: underline;
+}
+#contact img 
+{
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+}
+#contact img:hover 
+{
+    transform: scale(1.2);
+}
+#copyright 
+{
+    font-size: 0.8rem;
+    opacity: 0.7;
+}

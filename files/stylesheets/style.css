@@ -1,0 +1,61 @@
+:root
+{
+    --black-charcoal: #333333;      
+    --color-text: #EEEEEE;
+    --purple-start: #800ECD;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 600 !important; /* SemiBold */
+}
+
+body::-webkit-scrollbar 
+{
+    display: none;                   /* Chrome, Safari, Opera */
+}
+
+body 
+{
+    height: 100vh;
+    overflow-y: scroll;               /* Scroll verticale se necessario */
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* Internet Explorer e Edge legacy */
+
+    background-color: var(--black-charcoal);
+}
+
+html, body 
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::selection 
+{
+    background-color: #B5FF00;
+    color: #000000;
+}
+
+img 
+{
+    user-select: none;
+}
+
+/*
+::selection 
+{
+    background-color: #00AEEF; /* Azzurro vivido 
+    color: #ffffff;
+}
+
+::selection 
+{
+    background-color: #e0e0e0; /* Grigio chiarissimo 
+    color: #121212;           /* Quasi nero 
+}
+*/

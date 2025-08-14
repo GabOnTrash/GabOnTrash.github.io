@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="files/stylesheets/style.css">
+    <link rel="stylesheet" href="files/stylesheets/navbar.css">
+    <link rel="stylesheet" href="files/stylesheets/start.css">
+    <link rel="stylesheet" href="files/stylesheets/info.css">
+    <link rel="stylesheet" href="files/stylesheets/projectCards.css">
+    <link rel="stylesheet" href="files/stylesheets/projectPages.css">
+    <link rel="stylesheet" href="files/stylesheets/footer.css">
+    <link rel="stylesheet" href="files/stylesheets/mediaQueries.css">
+
+    <title>PortFolio</title>
+
+</head>
+<body>
+
+    <nav id="navbar" class="hidden">
+        
+        <div id="logo">
+            <img src="assets/images/globe.png" id="icon"><span>Gabriele Armenise</span>
+        </div>
+
+        <div id="menu">
+            <a href="#info">Info</a>
+            <a href="#projectSection">Languages</a>
+            <a href="#contact">Contact</a>
+            <a href="files/documents/CV_Studente.pdf" target="_blank">My CV</a>
+        </div>
+    </nav>
+
+    <div id="start">
+        
+        <div id="description">
+            <p>Web Personal PortFolio made by myself, using Three.js for the animation and normal JS for the entire website, with no libraries whatsoever.</p>
+        </div>
+
+        <div id="canvas-container"></div>
+
+        <div id="overlay">
+            <span id="link">
+                <a href="#info" onclick="Pressed()">See My PortFolio ↓</a>
+            </span>
+        </div>
+    </div>
+
+    <div id="info">
+        <div id="name">
+            <span>GABRIELE ARMENISE</span>
+        </div>
+        
+        <div id="content">
+            <div id="group">
+                <div id="text" class="hidden">
+                    <h4>Hello!<br>I'm Gabriele</h4>
+                    <p>
+                    I'm a 17 years old student, attending "Dell'Erba" school in Castellana Grotte 
+                    where I'm studying Computer Science. I have a passion for programming and 
+                    software development. I love creating new projects and learning new technologies.
+                    I have experience in various programming languages, and I'm always open to learn more.
+                    I was born in Putignano (Ba) and I now know programming languages like C, C++, Python, Java and also
+                    a little bit of the basics of php and Javascript (needed for this PortFolio)...
+                    </p>
+                </div>
+                <div id="imageContainer">
+                    <span class="text">Some of my photos from a great NY travel!</span>
+                    <div id="galleryDiv">
+                        <button class="galleryBtn" id="back" onclick="updateGalleryImage(-1)"><img class="arrow" src="assets/svg/arrowLeft.svg"></button>
+                        <button class="galleryBtn" id="front" onclick="updateGalleryImage(1)"><img class="arrow" src="assets/svg/arrowRight.svg"></button>
+                        <img src="assets/images/libertyStatue.jpg" alt="NYPhotos" id="gallery" class="gabrieleImg">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="down">
+                <a id="arrowDown" href="#projectSection">↓</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectSection">
+        <div id="projectsLabel">
+            <h4 id="programming">PROGRAMMING</h4>
+            <h4 id="languages">LANGUAGES</h4>
+        </div> 
+
+        <div id="descr">
+            <div id="cards">
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #5C6BC0);" data-language='c'><img src="assets/svg/c.svg"><span>C</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #0086D4);" data-language='c'><img src="assets/svg/c++.svg"><span>C++</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FFC107);" data-language='python'><img src="assets/svg/py.svg"><span>Python</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #4E7896);" data-language='java'><img src="assets/svg/java.svg"><span>Java</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FF6D00);" data-language='html'><img src="assets/svg/html.svg"><span>Html</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #0277BD);" data-language='css'><img src="assets/svg/css.svg"><span>CSS</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #FFD600);" data-language='js'><img src="assets/svg/javascript.svg"><span>JS</span></div>
+                <div class="card" style="filter: drop-shadow(0 0 0.9rem #777BB3);" data-language='php'><img src="assets/svg/php.svg"><div>PHP</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="morePrj" class="Prj">
+
+        <div class="prjContainer" id="c-cpp">
+            <h4>C/C++ Projects</h4>
+            <div class="prj" id="Tetris">
+                <span><a href="https://github.com/GabOnTrash/Tetris_1" target="_blank">Tetris</a></span>
+            </div>
+
+            <div class="prj" id="space shooter">
+                <span><a href="https://github.com/GabOnTrash/Space-Invader" target="_blank">Space Shooter</a></span>
+            </div>
+
+            <div class="prj" id="pong">
+                <span><a href="https://github.com/GabOnTrash/Pong" target="_blank">Pong</a></span>
+            </div>
+
+            <div class="prj" id="crosshair">
+                <span><a href="https://github.com/GabOnTrash/Crosshair" target="_blank">My Crosshair</a></span>
+            </div>
+
+        </div>
+
+        <div class="prjContainer" id="python">
+            <h4>Python Projects</h4>
+            <div class="prj" id="SkyClimb">
+                <span><a href="https://github.com/GabOnTrash/Sky-Climb" target="_blank">Sky Climb</a></span>
+            </div>
+
+            <div class="prj" id="YtDown">
+                <span><a href="" target="_blank">Youtube Downloader</a></span>
+            </div>
+
+            <div class="prj" id="qrcode">
+                <span><a href="" target="_blank">QR Code Generator</a></span>
+            </div>
+
+            <div class="prj" id="vSurv">
+                <span><a href="" target="_blank">Vampire Survivor</a></span>
+            </div>
+
+        </div>
+
+        <div class="prjContainer" id="java">
+            <h4>Java Projects</h4>
+            <div class="prj" id="...">
+                <span><a href="" target="_blank">Nothing Intresting</a></span>
+            </div>
+
+            <div class="prj" id="...">
+                <span><a href="" target="_blank">Nothing Intresting</a></span>
+            </div>
+
+            <div class="prj" id="...">
+                <span><a href="" target="_blank">Nothing Intresting</a></span>
+            </div>
+
+            <div class="prj" id="...">
+                <span><a href="" target="_blank">Nothing Intresting</a></span>
+            </div>
+
+        </div>
+
+        <div class="prjContainer" id="html">
+            <h4>Html Projects</h4>
+            <div class="prj" id="calculator">
+                <span><a href="https://gabrielearmenise.altervista.org/Vecchi_prog/CalcAll1.html" target="_blank">Calculator</a></span>
+            </div>
+
+            <div class="prj" id="loginPage">
+                <span><a href="https://gabrielearmenise.altervista.org/Login/login.html" target="_blank">Login Page</a></span>
+            </div>
+
+            <div class="prj" id="lecceMap">
+                <span><a href="https://gabrielearmenise.altervista.org/lecce/Visitare%20lecce.html" target="_blank">Lecce's Map</a></span>
+            </div>
+
+            <div class="prj" id="diceGenerator">
+                <span><a href="https://gabrielearmenise.altervista.org/DADI/Dadi.php" target="_blank">Dice Generator</a></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        <div id="contact">
+            <span id="github">
+                <a href="https://github.com/gabontrash" target="_blank">
+                    <img src="assets/svg/github.svg" alt="GitHub">GitHub
+                </a>
+            </span>
+    
+            <span id="instagram">
+                <a href="https://www.instagram.com/_gabrielearmenise" target="_blank">
+                    <img src="assets/svg/instagram.svg" alt="Instagram">Instagram
+                </a>
+            </span>
+    
+            <span id="gmail">
+                <a href="mailto:gabrielearmenise08@gmail.com" target="_blank">
+                    <img src="assets/svg/gmail.svg" alt="Gmail">Gmail
+                </a>
+            </span>
+        </div>
+    
+        <div id="copyright">
+            &copy; 2025 Gabriele Armenise. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script type="importmap">
+    {
+        "imports": 
+        {
+            "three": "https://unpkg.com/three@0.154.0/build/three.module.js",
+            "three/addons/lines/Line2.js": "https://unpkg.com/three@0.154.0/examples/jsm/lines/Line2.js",
+            "three/addons/lines/LineGeometry.js": "https://unpkg.com/three@0.154.0/examples/jsm/lines/LineGeometry.js",
+            "three/addons/lines/LineMaterial.js": "https://unpkg.com/three@0.154.0/examples/jsm/lines/LineMaterial.js"
+        }
+    }
+    </script>
+    <script src="files/scripts/script.js"></script>
+    <script type="module" src="files/scripts/figure.js"></script>
+</body>
+</html>
