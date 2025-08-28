@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/images/globe.png";
-import cv from '../documents/CV_Studente.pdf'
 import "./Navbar.css";
 
 function Navbar() 
@@ -23,7 +22,7 @@ function Navbar()
                 <li><a href="#about">About me</a></li>
                 <li><a href="#skills">Dev skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href={cv} target="_blank" rel="noopener noreferrer">Curriculum</a></li>
+                <li><a href="/Gabriele_Armenise_CV_IT_ENG.zip" download>Curriculum</a></li>
             </ul>
         </nav>
     );
