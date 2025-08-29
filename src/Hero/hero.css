@@ -42,12 +42,15 @@
 #canvas-container
 {
     flex: 1;
+    max-width: 1000px;
+    max-height: 1000px;
     width: 50%;
     height: 100%;
     aspect-ratio: 1 / 1; /* sempre quadrato */
     position: relative;
     z-index: 1;
     display: block;
+    align-self: center;
 }
 canvas 
 {
