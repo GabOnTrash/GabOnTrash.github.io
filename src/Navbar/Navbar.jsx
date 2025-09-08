@@ -8,16 +8,17 @@ function Navbar()
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav id="navbar">
+        <nav id="navbar" className={menuOpen ? "open" : ""}>
+            
             <div id="logo">
-            <img src={logo} alt="Logo" />
-            <p>Gabriele</p>
-        </div>
+                <img src={logo} alt="Logo" />
+                <p>Gabriele</p>
+            </div>
 
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <FaTimes /> : <FaBars />}
-        </div>
-
+            <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <FaTimes /> : <FaBars />}
+            </div>
+            
             <ul className={menuOpen ? "nav-links active" : "nav-links"}>
                 <li><a href="#about">About me</a></li>
                 <li><a href="#skills">Dev skills</a></li>

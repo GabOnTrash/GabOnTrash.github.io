@@ -3,16 +3,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
     background-color: var(--soft-dark);
-    color: var(--soft-white);
+    color: var(--soft-red);
+    z-index: 100;
+
+    border-radius: 8px;
     height: 5rem;
     padding: 0 1.5rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+    top: 1.5rem;    
+    left: 1.5rem;
+    right: 1.5rem;
+    width: auto;
+    transition: all 0.5s;
 }
-
 #navbar #logo 
 {
     display: flex;
@@ -34,6 +38,8 @@
     align-items: center;
     gap: 1.5rem;
     transition: transform 0.3s ease;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 .nav-links li 
 {
@@ -46,7 +52,7 @@
     gap: 0.5rem;
     padding: 0.45rem 0.9rem;
     text-decoration: none;
-    color: var(--soft-white);
+    color: var(--soft-red);
     font-size: 1.1rem;
     font-weight: 500;
     border-radius: 8px;
@@ -57,7 +63,7 @@
 .nav-links a:hover,
 .nav-links a:focus 
 {
-    transform: translateY(-4px);       /* prova -4px per essere visibile */
+    transform: translateY(-4px);     
     background-color: rgba(255,255,255,0.05);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     text-decoration: none;
@@ -70,8 +76,7 @@
     width: 2rem;
     height: 2rem;
 }
-
-@media (max-width: 800px) 
+@media screen and (max-width: 825px) 
 {
     .hamburger 
     {
@@ -81,20 +86,31 @@
     {
         position: absolute;
         flex-direction: column;
-        background-color: var(--soft-dark);
+        pointer-events: none;
         width: 100%;
         top: 5rem;
         right: 0;
         padding: 1rem;
-        transform: translateX(100%);
         opacity: 0;
         transition: all 0.5s;
-        border-top: 1px solid var(--soft-white);
     } 
-
+    #navbar.open 
+    {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
     .nav-links.active 
     {
-        transform: translateX(0);
+        pointer-events: all;
         opacity: 1;
+        background: rgba(115, 115, 115, 0.2);
+        backdrop-filter: blur(10px);
     }
 }
+@media screen and (max-width: 320px)
+{
+    #navbar #logo img 
+    {
+        display: none;
+    }
+} 

@@ -16,7 +16,7 @@
 .projects-label h4 
 {
     width: fit-content;
-    color: var(--purple-start);
+    color: var(--soft-red);
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
     margin-bottom: 1rem;
@@ -75,7 +75,7 @@
 }
 .projects-container h4 
 {
-    color: var(--purple-start);
+    color: var(--soft-red);
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }

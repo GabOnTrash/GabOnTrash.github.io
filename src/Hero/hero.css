@@ -18,13 +18,13 @@
     justify-content: center;
     flex: 1;
     padding: 2rem;
-    color: var(--purple-start);
+    color: var(--soft-red);
     z-index: 1;
 }
 #description p
 {
     background: rgba(20, 20, 20, 0.8);
-    border: 2px solid var(--purple-start);
+    border: 2px solid var(--soft-red);
     border-radius: 12px;
     padding: 2rem 3rem;
     max-width: 500px;
@@ -79,7 +79,7 @@ canvas
 
 #overlay #link 
 {
-    background: linear-gradient(135deg, var(--purple-start), #b14cff);
+    background: linear-gradient(135deg, var(--soft-red), #b14cff);
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     font-size: 1rem;

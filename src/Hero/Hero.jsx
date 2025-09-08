@@ -42,7 +42,7 @@ export default function StartSection()
 
         const lineMat = new LineMaterial(
         {
-            color: 0x800ecd,
+            color: 0xC4453C,
             linewidth: 4,
             transparent: true,
             opacity: 1,
@@ -57,7 +57,7 @@ export default function StartSection()
             new THREE.IcosahedronGeometry(0.85, 0),
             new THREE.MeshBasicMaterial(
             {
-                color: 0x800ecd,
+                color: 0xC4453C,
                 transparent: true,
                 opacity: 0.06,
                 side: THREE.BackSide,
