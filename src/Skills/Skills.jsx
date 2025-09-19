@@ -10,17 +10,25 @@ export default function Skills()
 {
     const [showLanguages, setShowLanguages] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(null);
+    const [isColumn, setIsColumn] = useState(false);
 
+;
     const toggleLanguages = () => 
     {
         setShowLanguages(!showLanguages);
         setSelectedLanguage(null);
-    };
-
+    }
+    
     const toggleProjects = (lang) => 
     {
+        changeFlexDirection();
         setSelectedLanguage(lang);
     };
+
+    const changeFlexDirection = () => 
+    {
+        setIsColumn(true); 
+    }
 
     const cardsRef = useRef(null);
     const observer = useRef(null);
@@ -50,36 +58,38 @@ export default function Skills()
     }, [showLanguages]); 
 
     return (
-        <section id="skills" className="project-section">
-        <div className="projects-label">
-            <h4 onClick={toggleLanguages}>DEV SKILLS</h4>
-        </div>
-
-        {showLanguages && (
-            <div className="cards" ref={cardsRef}>
-                {languagesData.map((lang) => (
-                    <Card key={lang.id} icon={icons[lang.icon]} label={lang.name} color={lang.color} onClick={() => toggleProjects(lang)}/>
-                ))}
-            </div>
-        )}
-
-        {selectedLanguage && (
-            <div className="projects-container">
-                <h4>{selectedLanguage.name} Projects</h4>
-
-                <div className="projects-grid">
-                    {selectedLanguage.projects.length > 0 ? 
-                    (
-                        selectedLanguage.projects.map((prj, i) => (
-                            <div key={i} className="project-card">
-                                <a href={prj.link} target="_blank" rel="noreferrer">
-                                    {prj.name}
-                                </a>
-                            </div>
-                    ))) : ( <p className="no-projects">No projects available yet</p> )}
+        <section id="skills" className="project-section" style={{ flexDirection: isColumn ? "column" : "row" }}>
+            
+            <div className="carousel">
+                <div className="group" ref={cardsRef}>
+                    {languagesData.map((lang) => (
+                        <Card key={lang.id} icon={icons[lang.icon]} label={lang.name} color={lang.color} onClick={() => toggleProjects(lang)}/>
+                    ))}
+                </div>
+                <div className="group" aria-hidden ref={cardsRef}>
+                    {languagesData.map((lang) => (
+                        <Card key={lang.id} icon={icons[lang.icon]} label={lang.name} color={lang.color} onClick={() => toggleProjects(lang)}/>
+                    ))}
                 </div>
             </div>
-        )}
+
+            {selectedLanguage && (
+                <div className="projects-container">
+                    <h4>{selectedLanguage.name} Projects</h4>
+
+                    <div className="projects-grid">
+                        {selectedLanguage.projects.length > 0 ? 
+                        (
+                            selectedLanguage.projects.map((prj, i) => (
+                                <div key={i} className="project-card">
+                                    <a href={prj.link} target="_blank" rel="noreferrer">
+                                        {prj.name}
+                                    </a>
+                                </div>
+                        ))) : ( <p className="no-projects">No projects available yet</p> )}
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

@@ -1,77 +1,34 @@
 .project-section 
 {
-    padding: 2rem;
+    min-height: 40vh;
     color: #fff;
     text-align: center;
-}
-
-.projects-label 
-{
-    cursor: pointer;
-    user-select: none;
     display: flex;
-    justify-content: center;
-}
-
-.projects-label h4 
-{
-    width: fit-content;
-    color: var(--soft-red);
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    transition: transform 240ms ease, background-color 240ms ease, box-shadow 240ms ease;
-}
-.projects-label h4:hover,
-.projects-label h4:focus 
-{
-    transform: translateY(-4px);     
-    background-color: rgba(0, 0, 0, 0.100);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-.cards 
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.card 
-{
-    background: var(--soft-dark);
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 7rem;
-    height: 7rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    cursor: pointer;
 }
-
-.card img 
+.carousel
 {
-    width: 3rem;
-    height: 3rem;
+    height: 50%;
+    width: 100%;
+    display: flex;
 }
-.card span 
+.carousel::-webkit-scrollbar
 {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+    display: none;
 }
-
-.card:hover 
+.group
 {
-    transform: translateY(-5px) scale(1.05);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 2rem;
+    animation: scroll 20s linear infinite;
+    transform: translateZ(0);
 }
 .projects-container
 {
     margin-top: 2.5rem;
+    padding-bottom: 2rem;
 }
 .projects-container h4 
 {
@@ -82,7 +39,7 @@
 .projects-grid 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
     gap: 1rem;
 }
 .project-card 
@@ -96,6 +53,7 @@
 {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
 }
 .project-card:hover 
 {
@@ -105,4 +63,21 @@
 {
     color: #777;
     font-size: 0.9rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+@keyframes scroll
+{
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@media screen and (max-width: 600px) 
+{
+    .group
+    {
+        gap: 1rem;
+        padding-left: 1rem;
+    }
 }
