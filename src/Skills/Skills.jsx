@@ -8,27 +8,12 @@ import "./skills.css";
 
 export default function Skills() 
 {
-    const [showLanguages, setShowLanguages] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(null);
-    const [isColumn, setIsColumn] = useState(false);
-
-;
-    const toggleLanguages = () => 
-    {
-        setShowLanguages(!showLanguages);
-        setSelectedLanguage(null);
-    }
     
     const toggleProjects = (lang) => 
     {
-        changeFlexDirection();
         setSelectedLanguage(lang);
     };
-
-    const changeFlexDirection = () => 
-    {
-        setIsColumn(true); 
-    }
 
     const cardsRef = useRef(null);
     const observer = useRef(null);
@@ -41,7 +26,6 @@ export default function Skills()
         {
             if (!entry.isIntersecting) 
             {
-                setShowLanguages(false);
                 setSelectedLanguage(null);
             }
         }, { threshold: 0.1 });
@@ -55,10 +39,10 @@ export default function Skills()
                 observer.current.unobserve(cardsRef.current);
             }
         };
-    }, [showLanguages]); 
+    }, []); 
 
     return (
-        <section id="skills" className="project-section" style={{ flexDirection: isColumn ? "column" : "row" }}>
+        <section id="skills" className="project-section" style={{ flexDirection: selectedLanguage ? "column" : "row" }}>
             
             <div className="carousel">
                 <div className="group" ref={cardsRef}>
