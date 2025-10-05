@@ -58,7 +58,8 @@
 }
 .arrow
 {
-    scale: 0.7;
+    width: 100%;
+    scale: 0.9;
 }
 #front
 {
@@ -72,7 +73,7 @@
     border-top-left-radius: 0;
     left: 0;
 }
-#imageContainer img 
+#imageContainer #gallery 
 {
     display: block;
     width: 100%;
@@ -80,6 +81,11 @@
     aspect-ratio: 16/9;
     border-radius: 8px;
     transition: 0.3s;
+}
+#imageContainer #gallery, #front, #back
+{
+    outline: 2px solid var(--soft-dark);
+    outline-offset: 0px;
 }
 
 @media screen and (max-width: 1600px) 
