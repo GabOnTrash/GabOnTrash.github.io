@@ -12,42 +12,38 @@ export default function StartSection()
 {
     const containerRef = useRef(null);
 
-    useEffect(() => 
-    {
+    useEffect(() => {
         const container = containerRef.current;
+        if (!container) return;
 
-        // Scene, camera, renderer
+        // Scene / Camera / Renderer
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(
             45,
-            container.clientWidth / container.clientHeight,
-            0.1,
+            1,     // placeholder, aggiornata subito
+            0.01,
             100
         );
-        camera.position.set(0, 0, 3);
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
         renderer.setClearColor(0x000000, 1);
-        renderer.setSize(container.clientWidth, container.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.outputColorSpace = THREE.SRGBColorSpace;
         container.appendChild(renderer.domElement);
 
-        // Wireframe
-        const geometry = new THREE.IcosahedronGeometry(0.8, 0);
-        const edges = new THREE.EdgesGeometry(geometry);
-        const pos = Array.from(edges.attributes.position.array);
+        // Geometry
+        const geo = new THREE.IcosahedronGeometry(0.8, 0);
+        const edges = new THREE.EdgesGeometry(geo);
+        const positions = Array.from(edges.attributes.position.array);
 
         const lineGeo = new LineGeometry();
-        lineGeo.setPositions(pos);
+        lineGeo.setPositions(positions);
 
-        const lineMat = new LineMaterial(
-        {
+        const lineMat = new LineMaterial({
             color: 0xC4453C,
-            linewidth: 4,
+            linewidth: 0.02 * window.devicePixelRatio * 100, 
             transparent: true,
-            opacity: 1,
+            opacity: 1
         });
-        lineMat.resolution.set(container.clientWidth, container.clientHeight);
 
         const wire = new Line2(lineGeo, lineMat);
         wire.computeLineDistances();
@@ -55,52 +51,85 @@ export default function StartSection()
 
         const glow = new THREE.Mesh(
             new THREE.IcosahedronGeometry(0.85, 0),
-            new THREE.MeshBasicMaterial(
-            {
+            new THREE.MeshBasicMaterial({
                 color: 0xC4453C,
                 transparent: true,
                 opacity: 0.06,
-                side: THREE.BackSide,
+                side: THREE.BackSide
             })
         );
         scene.add(glow);
 
-        const animate = () => 
-        {
-            requestAnimationFrame(animate);
+        // Fit camera esatto all'oggetto
+        const fitCamera = (padding = 1.0) => {
+            const sphere = new THREE.Sphere();
+            new THREE.Box3().setFromObject(glow).getBoundingSphere(sphere);
+
+            // Aggiorna aspect
+            const w = Math.floor(container.clientWidth);
+            const h = Math.floor(container.clientHeight);
+            camera.aspect = w / h;
+
+            // Calcola distanza che soddisfa sia asse verticale che orizzontale
+            const fov = THREE.MathUtils.degToRad(camera.fov);
+            const halfFovV = fov / 2;
+            const halfFovH = Math.atan(Math.tan(halfFovV) * camera.aspect);
+
+            // Raggi proiettati richiesti
+            const distV = sphere.radius / Math.sin(halfFovV);
+            const distH = sphere.radius / Math.sin(halfFovH);
+            const distance = Math.max(distV, distH) * padding;
+
+            camera.position.set(sphere.center.x, sphere.center.y, sphere.center.z + distance);
+            camera.lookAt(sphere.center);
+            // Near/Far compatti per precisione
+            camera.near = Math.max(0.01, distance - sphere.radius * 2);
+            camera.far = distance + sphere.radius * 2;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(w, h, false);
+            lineMat.resolution.set(w, h);
+        };
+
+        const handleResize = () => {
+            if (!container) return;
+            fitCamera(1.0);
+        };
+
+        // ResizeObserver per avere dimensione reale immediatamente
+        const ro = new ResizeObserver(() => handleResize());
+        ro.observe(container);
+
+        // Prima misura (requestAnimationFrame assicura layout completo)
+        requestAnimationFrame(() => handleResize());
+
+        // Animazione
+        const animate = () => {
             wire.rotation.x += 0.003;
             wire.rotation.y += 0.005;
             glow.rotation.x += 0.003;
             glow.rotation.y += 0.005;
             renderer.render(scene, camera);
+            requestAnimationFrame(animate);
         };
         animate();
 
-        const handleResize = () => 
-        {
-            const w = container.clientWidth;
-            const h = container.clientHeight;
-            
-            camera.aspect = w / h;
-            camera.updateProjectionMatrix();
-
-            const baseWidth = 800;
-            const zoomFactor = Math.max(0.5, w / baseWidth);
-            camera.position.z = 3 / zoomFactor;
-
-            renderer.setSize(w, h);
-            lineMat.resolution.set(w, h);
-        };
-
         window.addEventListener("resize", handleResize);
-        handleResize();
 
-        return () => 
-        {
+        return () => {
+            ro.disconnect();
             window.removeEventListener("resize", handleResize);
             renderer.dispose();
+            lineGeo.dispose();
+            lineMat.dispose();
+            geo.dispose();
+            edges.dispose();
+            glow.geometry.dispose();
+            glow.material.dispose();
             scene.clear();
-            container.removeChild(renderer.domElement);
+            if (renderer.domElement.parentNode === container) {
+                container.removeChild(renderer.domElement);
+            }
         };
     }, []);
 

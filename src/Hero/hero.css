@@ -42,21 +42,22 @@
 #canvas-container
 {
     flex: 1;
-    max-width: 1000px;
-    max-height: 1000px;
-    width: 50%;
-    height: 100%;
-    aspect-ratio: 1 / 1; /* sempre quadrato */
     position: relative;
-    z-index: 1;
-    display: block;
-    align-self: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;         /* Evita debordo */
+    margin: 0;
+    padding: 0;
 }
 canvas 
 {
     width: 100%;
     height: 100%;
     display: block;
+    margin: 0;
+    padding: 0;
+    image-rendering: optimizeQuality;
 }
 #sector
 {
@@ -105,21 +106,20 @@ canvas
 {
     #sector 
     {
-        padding-top: 15%;
         flex-direction: column;
     }
-    #description, #canvas-container
+    #description
     {
         width: 100%;
         height: 50%;
     }
+    #description p 
+    {
+        padding: 1rem;
+    }
 }
 @media (max-width: 900px) 
 {
-    #sector 
-    {
-        padding-top: 25%;
-    }
     #description
     {
         left: 1.5rem;
@@ -127,8 +127,8 @@ canvas
         width: auto;
         font-size: 1.05rem;
     }
-    #description p 
+    #sector
     {
-        padding: 1rem;
+        padding-top: 5%;
     }
 }
