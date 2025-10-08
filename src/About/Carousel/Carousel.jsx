@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import liberty from '../../assets/images/libertyStatue.jpg';
 import brooklyn from '../../assets/images/brooklyn.jpg';
 import grandCentral from '../../assets/images/grandCentral.jpg';
-import groupPhoto from '../../assets/images/groupPhoto.jpg';
 import wallSt from '../../assets/images/wallSt.jpg';
 import ts1 from '../../assets/images/timesSquare1.jpg';
 import ts2 from '../../assets/images/timesSquare2.jpg';
