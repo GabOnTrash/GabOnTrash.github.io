@@ -21,7 +21,6 @@ function Carousel()
         { title: "Me under the Liberty statue!", img: liberty },
         { title: "A photo of the Manhattan bridge as seen from Brooklyn!", img: brooklyn },
         { title: "Grand Central Station!", img: grandCentral },
-        { title: "A group photo with the other guys I went to New York with!", img: groupPhoto },
         { title: "A photo of the iconic Wall Street sign!", img: wallSt },
         { title: "Photo of the famous 'Red Stair' in Times Square.", img: ts1 },
         { title: "Another photo of Times Square!", img: ts2 }
