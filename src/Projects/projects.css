@@ -1,0 +1,134 @@
+#projects 
+{
+    min-height: 100vh;
+    padding: 2rem;
+    background: var(--soft-white);
+}
+
+.projects-container 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-header 
+{
+    margin-bottom: 4rem;
+}
+
+.projects-header h2 
+{
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--soft-dark);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.projects-header h2::after 
+{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--soft-red), transparent);
+}
+
+.filter-tabs 
+{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.filter-tabs button 
+{
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--soft-dark);
+    border-radius: 8px;
+    color: var(--soft-dark);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Courier New', monospace;
+}
+
+.filter-tabs button:hover 
+{
+    border-color: var(--soft-red);
+    color: var(--soft-red);
+    transform: translateY(-2px);
+    background: rgba(231, 76, 60, 0.05);
+}
+
+.filter-tabs button.active 
+{
+    background: var(--soft-red);
+    border-color: var(--soft-red);
+    color: var(--soft-white);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.projects-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1300px)
+{
+    #projects 
+    {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .projects-header h2 
+    {
+        font-size: 2rem;
+    }
+
+    .projects-grid 
+    {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .filter-tabs 
+    {
+        justify-content: center;
+    }
+
+    .filter-tabs button 
+    {
+        flex: 1;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 500px) 
+{
+    #projects
+    {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media (max-width: 480px) 
+{
+    .filter-tabs button 
+    {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}

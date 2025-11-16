@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Space Shooter Game",
+    "description": "Arcade style space shooter with multiple difficulties, and power-ups, with plenty of customizable settings.",
+    "technologies": ["C++", "Raylib", "Json", "Windows"],
+    "image": "/images/spaceinvader.png",
+    "github": "https://github.com/GabOnTrash/Space-Invader",
+    "demo": null,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Customizeable crosshair",
+    "description": "Desktop application to create and customize crosshairs for FPS games. Features customizeable sizes and the option to save data locally.",
+    "technologies": ["C++", "GLFW", "Dear ImGui", "Json"],
+    "image": "/images/crosshair.jpg",
+    "github": "https://github.com/GabOnTrash/Crosshair",
+    "demo": null,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Platformer game",
+    "description": "2D platformer game with multiple levels, enemies. Features smooth controls and pixel art style.",
+    "technologies": ["Python", "Pygame-ce", "Tiled"],
+    "image": "/images/skyclimb.png",
+    "github": "https://github.com/GabOnTrash/Sky-Climb",
+    "demo": null,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "QR Code Generator",
+    "description": "QR Code generator web app for encoding URLs and text into QR codes, with Python backend.",
+    "technologies": ["Python", "Flask", "Html", "CSS"],
+    "image": "/images/qrcode.png",
+    "github": null,
+    "demo": "https://gabriele.pythonanywhere.com",
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Random Dice generator",
+    "description": "Random dice generator with image visualization.",
+    "technologies": ["Html", "CSS", "PHP"],
+    "image": "/images/dadi.jpg",
+    "github": null,
+    "demo": "https://gabrielearmenise.altervista.org/DADI/Dadi.php",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Pong Game",
+    "description": "Classic Pong game in single player mode. Features simple controls and retro graphics.",
+    "technologies": ["C++", "Raylib"],
+    "image": "/images/pong.png",
+    "github": "https://github.com/GabOnTrash/Pong",
+    "demo": null,
+    "featured": false
+  }
+]

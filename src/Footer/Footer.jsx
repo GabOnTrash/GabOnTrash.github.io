@@ -1,8 +1,8 @@
 import "./footer.css"
 
-import githubIcon from "../assets/svg/github.svg";
-import instagramIcon from "../assets/svg/instagram.svg";
-import gmailIcon from "../assets/svg/gmail.svg"; 
+import githubIcon from "/svg/github.svg";
+import instagramIcon from "/svg/instagram.svg";
+import gmailIcon from "/svg/gmail.svg"; 
 
 function Footer()
 {

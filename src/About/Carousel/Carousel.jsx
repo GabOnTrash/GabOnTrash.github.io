@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-import liberty from '../../assets/images/libertyStatue.jpg';
-import brooklyn from '../../assets/images/brooklyn.jpg';
-import grandCentral from '../../assets/images/grandCentral.jpg';
-import wallSt from '../../assets/images/wallSt.jpg';
-import ts1 from '../../assets/images/timesSquare1.jpg';
-import ts2 from '../../assets/images/timesSquare2.jpg';
+import liberty from '/images/libertyStatue.jpg';
+import brooklyn from '/images/brooklyn.jpg';
+import grandCentral from '/images/grandCentral.jpg';
+import wallSt from '/images/wallSt.jpg';
+import ts1 from '/images/timesSquare1.jpg';
+import ts2 from '/images/timesSquare2.jpg';
 
-import arrowLeft from '../../assets/svg/arrowLeft.svg';
-import arrowRight from '../../assets/svg/arrowRight.svg';
+import arrowLeft from '/svg/arrowLeft.svg';
+import arrowRight from '/svg/arrowRight.svg';
 
 import './carousel.css'
 

@@ -5,7 +5,7 @@ import About from './About/About.jsx'
 import Footer from './Footer/Footer.jsx'
 import Navbar from './Navbar/Navbar.jsx'
 import Hero from './Hero/Hero.jsx'
-import Skills from './Skills/Skills.jsx'
+import Projects from './Projects/Projects.jsx'
 
 function App() 
 {
@@ -14,7 +14,7 @@ function App()
           <Navbar/>
           <Hero/>
           <About/>
-          <Skills/>
+          <Projects />
           <Footer/>
       </>
   )

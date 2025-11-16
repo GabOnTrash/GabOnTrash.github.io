@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../assets/images/globe.png";
+import logo from "/images/globe.png";
 import "./Navbar.css";
 
 function Navbar() 
@@ -21,7 +21,7 @@ function Navbar()
             
             <ul className={menuOpen ? "nav-links active" : "nav-links"}>
                 <li><a href="#about">About me</a></li>
-                <li><a href="#skills">Dev skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="/Gabriele_Armenise_CV_IT_ENG.zip" download>
                     Curriculum
