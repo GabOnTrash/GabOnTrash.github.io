@@ -16,7 +16,9 @@ export default function Projects()
         <section id="projects">
             <div className="projects-container">
                 <div className="projects-header">
-                    <h2>Projects</h2>
+                    <div className="title-divider">
+                        <h2>Projects</h2>
+                    </div>
                     
                     <div className="filter-tabs">
                         <button 

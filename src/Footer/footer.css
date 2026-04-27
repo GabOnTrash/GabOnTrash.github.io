@@ -1,45 +1,82 @@
 #footer 
 {
-    background-color: var(--soft-dark);
-    color: var(--soft-white);
-    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    
+    padding: 4rem 1rem 2rem 1rem;
     text-align: center;
     width: 100%;
+    margin-top: auto;
 }
-#contact 
-{
+
+#contact {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 1rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
-#contact span a 
-{
+
+#contact span a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--soft-white);
-    gap: 0.4rem;
-    font-size: 1.2rem;
+    color: #e0e0e0;
+    gap: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-#contact span a:hover 
-{
-    text-decoration: underline;
+
+#contact span a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--soft-red);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
-#contact img 
-{
-    width: 1.25rem;
-    height: 1.25rem;
-    transition: transform 0.2s ease;
+
+#contact img {
+    width: 1.4rem;
+    height: 1.4rem;
+    filter: brightness(0) invert(1); 
+    transition: transform 0.3s ease;
 }
-#contact img:hover 
-{
-    transform: scale(1.2);
+
+#contact span a:hover img {
+    transform: scale(1.1);
+    filter: none; 
 }
-#copyright 
-{
-    font-size: 0.9rem;
-    opacity: 0.7;
+
+#copyright {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 2rem;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    #contact 
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #contact span a 
+    {
+        width: 200px;
+        justify-content: center;
+    }
 }

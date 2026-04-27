@@ -1,63 +1,123 @@
-#name 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#about {
     width: 100%;
-    height: 20%;
-    background-color: var(--soft-dark);
-    color: var(--soft-white);
-    font-size: 4.5rem;
-}
-#name span 
-{
-    transition: 0.5s;
-}
-#name span:hover 
-{
-    scale: 1.05;
-}
-#about 
-{
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--soft-white);
+    min-height: 110vh;
+    background-color: transparent;
+    overflow: visible;
+    position: relative;
+    padding: 8rem 2rem 4rem 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-#content 
+
+.about-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.about-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.3;
+    animation: aboutFloat 20s infinite alternate ease-in-out;
+}
+
+.blob-blue {
+    width: 400px; height: 400px;
+    background: #0080ff;
+    top: 10%; right: -5%;
+}
+
+.blob-purple {
+    width: 500px; height: 500px;
+    background: var(--purple-start);
+    bottom: 5%; left: -10%;
+    animation-delay: -5s;
+}
+
+@keyframes aboutFloat {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-50px, 80px); }
+}
+
+.about-header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    z-index: 1;
+}
+
+.section-badge {
+    color: var(--soft-red);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.section-title {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+
+#content {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; 
+    gap: 4rem; 
+    flex: 1;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1100px) {
+    #content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* for Projects section and About Section*/
+.title-divider 
 {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    justify-self: center;
-    align-self: center;
-    
-    width: 90%;
-    gap: 5%;
-    flex: 1;
+    gap: 2rem; 
+    width: 100%;
+    margin: 1rem 0;
+}
 
-    background-color: var(--soft-white);
-}
-@media screen and (max-width: 1600px) 
+.title-divider::before,
+.title-divider::after 
 {
-    #content
-    {
-        flex-direction: column;
-        width: 100%;
-        padding: 2rem;
-        gap: 0;
-    }
+    content: "";
+    height: 2px; 
+    flex: 1; 
 }
-@media screen and (max-width: 500px) 
-{
-    #content
-    {
-        width: 100%;
-        padding: 1rem;
-        gap: 0;
-    }
+
+.title-divider::before {
+    background: linear-gradient(90deg, transparent, var(--soft-red));
+}
+
+.title-divider::after {
+    background: linear-gradient(90deg, var(--soft-red), transparent);
+}
+
+.title-divider::before {
+    border-right: 3px solid var(--soft-red);
+}
+.title-divider::after {
+    border-left: 3px solid var(--soft-red);
+}
+
+.title-divider h2 {
+    margin: 0 !important;
+    white-space: nowrap; 
+    font-size: clamp(2rem, 5vw, 3rem);
 }
