@@ -65,4 +65,14 @@
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2.5rem; 
     margin-top: 2rem;
+    justify-items: center;
+}
+@media (max-width: 768px) {
+    #projects {
+        padding: 6rem 1rem 3rem 1rem; 
+    }
+    
+    .projects-grid {
+        gap: 1.5rem;
+    }
 }
