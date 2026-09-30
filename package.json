@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --cname gabrielearmenise.tech",
+    "deploy": "gh-pages -d dist --cname gabrielearmenise.dev",
     "lint": "eslint .",
     "preview": "vite preview"
   },
