@@ -1,28 +1,154 @@
-:root 
-{
-    --soft-white: #ffffffde;
-    --soft-dark: #242424;
-    --purple-start: #800ECD;
-    --soft-red: #C4453C;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+
+:root {
+  /* Color */
+  --color-bg: #111111;
+  --color-text: #ededed;
+  --color-muted: #999999;          
+  --color-accent: #c65d3a;         
+  --color-accent-ink: #e07a5f;     
+  --color-line: rgba(255, 255, 255, 0.12);
+  --color-bg-inverse: #ededed;
+  --color-text-inverse: #111111;
+
+  /* Type families */
+  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Fluid type scale */
+  --fs-meta: clamp(0.6875rem, 0.66rem + 0.12vw, 0.75rem);
+  --fs-body: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  --fs-body-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
+  --fs-title: clamp(1.5rem, 1.25rem + 1.1vw, 2.25rem);
+  --fs-display-md: clamp(2.25rem, 1.6rem + 2.8vw, 4rem);
+  --fs-display-lg: clamp(3rem, 1.8rem + 5.2vw, 7rem);
+  --fs-display-xl: clamp(3.75rem, 1.6rem + 9.5vw, 11rem);
+
+  --lh-display: 0.98;
+  --lh-title: 1.15;
+  --lh-body: 1.6;
+  --tracking-display: -0.02em;
+  --tracking-meta: 0.1em;
+  --measure: 68ch;
+
+  /* Spacing */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  --space-2xl: 12rem;
+  --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --page-pad: clamp(1.25rem, 0.5rem + 3.5vw, 3rem);
+
+  /* Layout */
+  --container: 1280px;
+  --bp-sm: 640px;
+  --bp-md: 900px;
+  --bp-lg: 1280px;
+
+  /* Shape & depth */
+  --radius-sm: 2px;
+  --radius-md: 4px;              
+  --border-hairline: 1px solid var(--color-line);
+  --shadow-hairline: 0 1px 2px rgba(23, 23, 23, 0.06);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-hover: 240ms;
+  --dur-reveal: 700ms;
+  --dur-page: 600ms;
+
+  /* Image ratios */
+  --ratio-portrait: 4 / 5;
+  --ratio-photo: 3 / 2;
+  --ratio-wide: 16 / 9;
+  --ratio-square: 1 / 1;
+  --ratio-classic: 4 / 3;
 }
 
-html, body, #root 
-{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: #0a0a0a;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
+/* Reset base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
-#root::-webkit-scrollbar 
-{
-    display: none;
+html { 
+  background: var(--color-bg); 
+  color: var(--color-text); 
+  scroll-padding-top: var(--space-lg);
+  scroll-behavior: smooth; 
+}
+
+body { 
+  font-family: var(--font-body); 
+  font-size: var(--fs-body); 
+  line-height: var(--lh-body); 
+  text-wrap: pretty; 
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: var(--font-display); 
+  font-weight: 400; 
+  line-height: var(--lh-display); 
+  letter-spacing: var(--tracking-display); 
+  text-wrap: balance; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+:focus-visible { 
+  outline: 2px solid var(--color-accent); 
+  outline-offset: 3px; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { 
+    animation-duration: 0.01ms !important; 
+    animation-iteration-count: 1 !important; 
+    transition-duration: 0.01ms !important; 
+    scroll-behavior: auto !important; 
+  }
+}
+
+/* Base Layout Classes */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gutter);
+}
+
+.hairline-top {
+  border-top: var(--border-hairline);
+}
+
+.hairline-bottom {
+  border-bottom: var(--border-hairline);
+}
+
+/* Responsive Root Tokens */
+@media screen and (max-width: 900px) {
+  :root {
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+    --space-2xl: 6rem;
+  }
 }

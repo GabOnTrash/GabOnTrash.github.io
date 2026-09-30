@@ -1,35 +1,27 @@
 import "./footer.css"
 
-import githubIcon from "/svg/github.svg";
-import instagramIcon from "/svg/instagram.svg";
-import gmailIcon from "/svg/gmail.svg"; 
-
 function Footer()
 {
     return (
-        <footer id="footer">
-            <div id="contact">
-                <span id="github">
-                    <a href="https://github.com/gabontrash" target="_blank">
-                        <img src={githubIcon} alt="GitHub"/>GitHub
-                    </a>
-                </span>
-        
-                <span id="instagram">
-                    <a href="https://www.instagram.com/_gabrielearmenise" target="_blank">
-                        <img src={instagramIcon} alt="Instagram"/>Instagram
-                    </a>
-                </span>
-        
-                <span id="gmail">
-                    <a href="mailto:gabrielearmenise08@gmail.com" target="_blank">
-                        <img src={gmailIcon} alt="Gmail"/>Gmail
-                    </a>
-                </span>
+        <footer id="contact" className="container hairline-top">
+            <div className="grid-12 footer-wayfinding">
+                <span className="section-number">03</span>
+                <h2 className="section-title">CONTACT</h2>
             </div>
-        
-            <div id="copyright">
-                &copy; {new Date().getFullYear()} Gabriele Armenise. All rights reserved.
+            
+            <div className="grid-12 footer-bottom">
+                <div className="footer-links">
+                    <a href="mailto:gabrielearmenise08@gmail.com" className="meta-link">Email</a>
+                    <a href="https://github.com/gabontrash" target="_blank" rel="noreferrer" className="meta-link">GitHub</a>
+                    <a href="https://www.instagram.com/_gabrielearmenise" target="_blank" rel="noreferrer" className="meta-link">Instagram</a>
+                    <a href="/Gabriele_Armenise_CV.pdf" target="_blank" download className="meta-link" style={{color: "var(--color-accent)"}}>Download CV</a>
+                </div>
+                
+                <div className="footer-copyright">
+                    <span className="meta-label">
+                        &copy; {new Date().getFullYear()} Gabriele Armenise. All rights reserved.
+                    </span>
+                </div>
             </div>
         </footer>
     );

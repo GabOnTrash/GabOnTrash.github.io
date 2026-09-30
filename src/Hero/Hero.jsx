@@ -1,38 +1,32 @@
 import React from "react";
 import "./hero.css"; 
 
-export default function StartSection() 
+export default function Hero() 
 {
     return (
-        <section id="hero">
-            <div className="blob-container">
-                <div className="blob blob-1"></div>
-                <div className="blob blob-2"></div>
-                <div className="blob blob-3"></div>
-                <div className="blob blob-4"></div>
-                <div className="noise-overlay"></div>
+        <section id="hero" className="container grid-12 hairline-bottom">
+            <div className="hero-statement">
+                <h1 className="hero-title">Gabriele<br/>Armenise</h1>
+                <p className="hero-subtitle">Software Developer</p>
             </div>
-
-            <div id="hero-content">
-                <div className="glass-panel">
-                    <div className="badge">Software Developer</div>
-                    <h1 className="title">
-                        Gabriele <span className="highlight">Armenise</span>
-                    </h1>
-                    <p className="description">
-                        Web Personal Portfolio made with HTML, CSS and React. 
-                        Clean design, smooth animations and focus on performance.
-                    </p>
+            
+            <div className="hero-metadata">
+                <div className="meta-block">
+                    <span className="meta-label">ROLE</span>
+                    <span className="meta-value">Software Developer</span>
                 </div>
-            </div>
-
-            <div id="scroll-section">
-                <a href="#about" className="mouse-scroll">
-                    <div className="mouse">
-                        <div className="wheel"></div>
-                    </div>
-                    <span>Scroll to view</span>
-                </a>
+                <div className="meta-block">
+                    <span className="meta-label">BASED IN</span>
+                    <span className="meta-value">Castellana Grotte (BA), Italy</span>
+                </div>
+                <div className="meta-block">
+                    <span className="meta-label">FOCUS</span>
+                    <span className="meta-value">C++, Python, Rust</span>
+                </div>
+                <div className="meta-block">
+                    <span className="meta-label">STATUS</span>
+                    <span className="meta-value">Open to work</span>
+                </div>
             </div>
         </section>
     );
